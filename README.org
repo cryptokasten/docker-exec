@@ -1,0 +1,37 @@
+#+TITLE: Docker exec
+#+PROPERTY: header-args:sh :session *shell docker-exec sh* :results silent raw
+#+OPTIONS: ^:nil
+
+#+begin_quote
+Run a command in a running container.
+#+end_quote
+
+** System environment
+
+- CentOS 8.1
+
+- Docker 19.03
+
+** Parameters
+
+Container name or ID.
+
+#+BEGIN_SRC sh
+CONTAINER="test_container"
+#+END_SRC
+
+Command.
+
+#+BEGIN_SRC sh
+COMMAND="bash"
+#+END_SRC
+
+** Docker exec usage
+
+#+BEGIN_SRC sh
+docker exec -i -t $CONTAINER $COMMAND
+#+END_SRC
+
+** References
+
+1. https://docs.docker.com/engine/reference/commandline/exec/
